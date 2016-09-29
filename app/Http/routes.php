@@ -11,4 +11,8 @@
 |
 */
 
-	Route::resource('/api', 'ApiController');
+
+	Route::get('api', 'ApiController@index');
+	Route::get('api/{id}', 'ApiController@show');
+	Route::put('api/{id}', 'ApiController@edit');
+	Route::delete('api/{id}', 'ApiController@destroy');
