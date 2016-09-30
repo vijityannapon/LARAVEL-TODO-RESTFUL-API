@@ -56,6 +56,7 @@ class Handler extends ExceptionHandler
             return response()->json($data);
         }
 
+
         if ($e instanceof \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException) {
 
             $data = [
@@ -65,6 +66,7 @@ class Handler extends ExceptionHandler
 
             return response()->json($data);
         }
+
 
         return parent::render($request, $e);
     }

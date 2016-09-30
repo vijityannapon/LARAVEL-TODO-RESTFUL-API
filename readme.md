@@ -11,10 +11,20 @@ Returns json data.
 5. Set status of task ( pending or done ).
 6. Delete a Task.
 
-
+## Server Requirements of Laravel Framework 5.*
+- PHP >= 5.6.4
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
 
 
 ## Installation
+
+You can clone this repository.
+Then run migration and seeder.
+
 
 
 ## Usage

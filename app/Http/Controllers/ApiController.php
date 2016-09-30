@@ -31,7 +31,7 @@ class ApiController extends Controller
 
     /**
      * Show single task
-     * @param  [int]
+     * @param  [int id]
      * @return [json]
      */
     public function show($id = null) 
@@ -61,8 +61,11 @@ class ApiController extends Controller
 
 
     /**
-     * @param  Request
-     * @return [type]
+     *  Create a new task
+     * @param  [int id]
+     * @param  [varchar subject]
+     * @param  [text content]
+     * @return [json]
      */
     public function create(Request $request) 
     {
