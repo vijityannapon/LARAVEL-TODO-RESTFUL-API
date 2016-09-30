@@ -25,6 +25,6 @@ Returns json data.
 | /api     			| GET 		| List all task of to do list		|
 | /api/{id}     	| GET		| View a single task by id 			|
 | /api/create   	| POST		| Create a new task 				|
-| /api/{id} 		| PATCH  	| Update task title/content by id	|
+| /api/{id} 		| PUT  		| Update task title/content by id	|
 | /api/{id}/status 	| PUT  		| Update task status by id			|
 | /api/{id} 		| DELETE  	| Delete task by id 				|
