@@ -31,7 +31,7 @@ Returns json data.
 
 
 ## Status Codes
-| Code        			| Message 																			|
+| Code  | Message 		| Description																		|
 | ------| ------------- | ---------------------------------------------------------------------------------	|
 | 200	| OK 			| The request was processed and returned successfully.								|
 | 201   | Created		| The new resource was created successfully											|
