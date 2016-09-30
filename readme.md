@@ -23,11 +23,11 @@ Returns json data.
 
 ## Installation
 
-	First : You can clone this repository.
+First : You can clone this repository.
 
-	Secound : Create Your DB  and config in file /config/database.php 
-	
-	Then : Run "php artisan migrate" To create a database table.
+Secound : Create Your DB  and config in file /config/database.php 
+
+Then : Run "php artisan migrate" To create a database table.
 
 
 
