@@ -1,6 +1,6 @@
 # Restful API - To do list
 
-This is Resetful API for To do list
+This is RESTFUL API for To do list
 
 ## Features
 1. List All Todo.
