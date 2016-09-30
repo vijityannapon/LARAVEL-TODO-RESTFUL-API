@@ -33,14 +33,14 @@ Then : Run "php artisan migrate" To create a database table.
 
 ## Usage
 
-| Path        		| Verb 		| Description  					|
-| ----------------- | --------- | -----------------------------	|
-| /api     			| GET 		| List all task of to do list	|
-| /api/{id}     	| GET		| View a single task 			|
-| /api/create   	| POST		| Add a new task 				|
-| /api/{id} 		| PUT/PATCH | Update task title/content 	|
-| /api/{id}/status 	| PUT/PATCH | Update task status 			|
-| /api/{id} 		| DELETE  	| Delete task 					|
+| Path        		| Verb 		| Params						| Description  					|
+| ----------------- | --------- | ----------------------------- | -----------------------------	|
+| /api     			| GET 		| 								| List all task of to do list	|
+| /api/{id}     	| GET		| 								| View a single task 			|
+| /api/create   	| POST		| subject, content 				| Add a new task 				|
+| /api/{id} 		| PUT/PATCH | subject, content 				| Update task title/content 	|
+| /api/{id}/status 	| PUT/PATCH | status ('pending' or 'done')	| Update task status 			|
+| /api/{id} 		| DELETE  	|  								| Delete task 					|
 
 
 ## Status Codes
