@@ -17,7 +17,6 @@ Returns json data.
 ## Installation
 
 
-
 ## Usage
 
 | Path        		| Verb 		| Description  					|
@@ -28,3 +27,13 @@ Returns json data.
 | /api/{id} 		| PUT/PATCH | Update task title/content 	|
 | /api/{id}/status 	| PUT/PATCH | Update task status 			|
 | /api/{id} 		| DELETE  	| Delete task 					|
+
+
+
+## Status Codes
+| Code        			| Message 																			|
+| ------| ------------- | ---------------------------------------------------------------------------------	|
+| 200	| OK 			| The request was processed and returned successfully.								|
+| 201   | Created		| The new resource was created successfully											|
+| 400  	| Bad request 	| Problem with the request, such as a missing, invalid or type mismatched parameter |
+
