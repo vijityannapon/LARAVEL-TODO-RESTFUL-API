@@ -169,8 +169,9 @@ class ApiController extends Controller
 
 
     /**
-     * @param  [type]
-     * @return [type]
+     * Delete task
+     * @param  [int]
+     * @return [json]
      */
     public function destroy($id = null) 
     {

@@ -30,11 +30,11 @@ Returns json data.
 
 
 ## Status Codes
-| Code  | Message 		| Description																		|
-| ------| ------------- | ---------------------------------------------------------------------------------	|
-| 200	| OK 			| The request was processed and returned successfully. update or delete successful.	|
-| 201   | Created		| The new resource was created successfully.										|
-| 204   | No task		| Problem with in task id or No row of task.										|
-| 400  	| Bad request 	| Problem with the request, such as a missing, invalid or type mismatched parameter.|
-| 404  	| Not Found 	| Your URL is wrong, or the requested resource doesn't exist. 						|
-
+| Code  | Message 				| Description																		|
+| ------| --------------------- | ---------------------------------------------------------------------------------	|
+| 200	| OK 					| The request was processed and returned successfully. update or delete successful.	|
+| 201   | Created				| The new resource was created successfully.										|
+| 204   | No task				| Problem with in task id or No row of task.										|
+| 400  	| Bad request 			| Problem with the request, such as a missing, invalid or type mismatched parameter.|
+| 404  	| Not Found 			| Your URL is wrong, or the requested resource doesn't exist. 						|
+| 405  	| Method Not Allowed 	| Your URL is wrong, or the requested resource doesn't exist. 						|
