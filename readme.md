@@ -37,4 +37,4 @@ Returns json data.
 | 204   | No task				| Problem with in task id or No row of task.										|
 | 400  	| Bad request 			| Problem with the request, such as a missing, invalid or type mismatched parameter.|
 | 404  	| Not Found 			| Your URL is wrong, or the requested resource doesn't exist. 						|
-| 405  	| Method Not Allowed 	| Your URL is wrong, or the requested resource doesn't exist. 						|
+| 405  	| Method Not Allowed 	| Method Not Allowed or Using the wrong verb. 										|
