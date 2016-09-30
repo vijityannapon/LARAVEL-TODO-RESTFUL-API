@@ -9,7 +9,8 @@ Returns json data.
 3. Add a new task to the list.
 4. Edit task 
 5. Set status of task ( pending or done ).
-6. Delete a Task.
+6. Delete a Task ( Hard delete if You want Soft delete You can Implement it).
+
 
 ## Server Requirements of Laravel Framework 5.*
 - PHP >= 5.6.4
@@ -22,8 +23,9 @@ Returns json data.
 
 ## Installation
 
-You can clone this repository.
-Then run migration and seeder.
+First : You can clone this repository.
+Secound : Create Your DB  and config in file /config/database.php 
+Then : Run "php artisan migrate" To create a database tableใ
 
 
 
