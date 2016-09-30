@@ -1,6 +1,6 @@
-# Restful API - To do list
+# RESTful API - To do list
 
-This is RESTFUL API for To do list.
+This is RESTful API for To do list.
 Returns json data.
 
 ## Features
@@ -24,7 +24,7 @@ Returns json data.
 | ----------------- |:---------:| --------------------------------:	|
 | /api     			| GET 		| List all task of to do list		|
 | /api/{id}     	| GET		| View a single task by id 			|
-| /api/create   	| POST		| Create a new task 				|
-| /api/{id} 		| PUT  		| Update task title/content by id	|
-| /api/{id}/status 	| PUT  		| Update task status by id			|
+| /api/create   	| POST		| Add a new task 					|
+| /api/{id} 		| PUT/PATCH | Update task title/content by id	|
+| /api/{id}/status 	| PUT/PATCH | Update task status by id			|
 | /api/{id} 		| DELETE  	| Delete task by id 				|
