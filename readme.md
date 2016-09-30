@@ -21,7 +21,7 @@ Returns json data.
 ## Usage
 
 | Path        		| Verb 		| Description  						|
-| ----------------- |:---------:| --------------------------------:	|
+| ----------------- | --------- | ---------------------------------	|
 | /api     			| GET 		| List all task of to do list		|
 | /api/{id}     	| GET		| View a single task by id 			|
 | /api/create   	| POST		| Add a new task 					|
