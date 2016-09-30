@@ -25,7 +25,7 @@ Returns json data.
 
 ...First : You can clone this repository.
 ...Secound : Create Your DB  and config in file /config/database.php 
-...Then : Run "php artisan migrate" To create a database tableใ
+...Then : Run "php artisan migrate" To create a database table.
 
 
 
