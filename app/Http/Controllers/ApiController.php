@@ -72,31 +72,41 @@ class ApiController extends Controller
     }
 
 
-    public function edit($id = null) 
+    public function edit(Request $request) 
     {
-        
-        $task = Task::where('id', $id)
-            ->update([
-                'task'    => 'xxxx',
-                'content' => 'bbbbb',
-            ]);
 
-        if ($task) {
+        if ($request->has('name')) {
+            //
+            $id = $request->input('id');
+            $task = Task::where('id', $id)
+                ->update([
+                    'task'    => 'xxxx',
+                    'content' => 'bbbbb',
+                ]);
 
-            $data = [
-                'status'  => 'success',
-                'code'    => 200,
-                'message' => 'The data were successfully updated.'
-            ];
+            if ($task) {
 
+                $data = [
+                    'status'  => 'success',
+                    'code'    => 200,
+                    'message' => 'The data were successfully updated.'
+                ];
+
+            } else {
+
+                $data = [
+                    'status'  => 'error',
+                    'code'    => 400,
+                    'message' => 'No row to be updated.'
+                ];
+
+            }
         } else {
-
             $data = [
-                'status'  => 'error',
+                'status'  => 'Bad Request',
                 'code'    => 400,
-                'message' => 'No row to be updated.'
+                'message' => 'Problem with the request, such as a missing, invalid or type mismatched parameter.'
             ];
-
         }
 
         return response()->json($data);
