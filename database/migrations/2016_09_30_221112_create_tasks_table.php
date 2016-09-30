@@ -16,7 +16,8 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->string('subject');
             $table->text('content');
-            $table->timestamp('created_at');
+            $table->enum('status', ['pending', 'done'])->default('pending');
+            $table->timestamps();
         });
     }
 

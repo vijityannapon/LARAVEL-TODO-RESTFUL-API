@@ -29,6 +29,7 @@ class ApiController extends Controller
 
     }
 
+
     /**
      * Show single task
      * @param  [int id]
@@ -98,8 +99,11 @@ class ApiController extends Controller
 
 
     /**
-     * @param  Request
-     * @return [type]
+     * Edit task
+     * @param  [int id]
+     * @param  [varchar subject]
+     * @param  [text content]
+     * @return [json]
      */
     public function edit($id = null, Request $request) 
     {
@@ -143,10 +147,10 @@ class ApiController extends Controller
     }
 
 
-
     /**
-     * @param  Request
-     * @return [type]
+     * @param  [int id]
+     * @param  [status pending or done]
+     * @return [json]
      */
     public function status($id = null, Request $request) 
     {
@@ -188,7 +192,7 @@ class ApiController extends Controller
 
     /**
      * Delete task
-     * @param  [int]
+     * @param  [int id]
      * @return [json]
      */
     public function destroy($id = null) 
