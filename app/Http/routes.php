@@ -11,11 +11,9 @@
 |
 */
 
-
-	Route::get('api', 'ApiController@index');
-
-	Route::get('api/{id}', 'ApiController@show');
-
-	Route::put('api/{id}', 'ApiController@edit');
-	
-	Route::delete('api/{id}', 'ApiController@destroy');
+Route::get('api', 'ApiController@index');
+Route::get('api/{id}', 'ApiController@show');
+Route::post('api/create', 'ApiController@create');
+Route::match(['put', 'patch'], 'api/{id}', 'ApiController@edit');
+Route::match(['put', 'patch'], 'api/{id}/status', 'ApiController@status');
+Route::delete('api/{id}', 'ApiController@destroy');

@@ -42,22 +42,20 @@ class ApiController extends Controller
         if ($task) {
 
             $data = [
-                'status'  => 'success',
                 'code'    => 200,
-                'message' => 'Show record',
+                'message' => 'OK',
                 'data'    => $task
             ];
 
         } else {
 
             $data = [
-                'status'  => 'error',
                 'code'    => 400,
-                'message' => 'No results found.',
-                'data'    => []
+                'message' => 'Bad request',
             ];
 
         }
+
         return response()->json($data);
     }
 
@@ -69,15 +67,30 @@ class ApiController extends Controller
     public function create(Request $request) 
     {
 
-        $task    = $request->input('id');
-        $content = $request->input('id');
+        if ($request->has('subject') && $request->has('content')) {
 
-        $task = Task::create([
-            'subject' => $task,
-            'content' => $content,
-        ]);
+            $subject = $request->input('subject');
+            $content = $request->input('content');
 
-        return response()->json($task);
+            $task = Task::create([
+                'subject' => $subject,
+                'content' => $content,
+            ]);
+
+            $data = [
+                'code'    => 201,
+                'message' => 'Created',
+                'data'    => $task
+            ];
+        } else {
+
+            $data = [
+                'code'    => 400,
+                'message' => 'Bad request',
+            ];
+        }
+
+        return response()->json($data);
     }
 
 
@@ -88,38 +101,39 @@ class ApiController extends Controller
     public function edit($id = null, Request $request) 
     {
 
-        if ($request->has('name')) {
-            //
-            $id = $request->input('id');
+        if ($id && $request->has('subject') && $request->has('content')) {
+
+            $subject = $request->input('subject');
+            $content = $request->input('content');
+
             $task = Task::where('id', $id)
                 ->update([
-                    'task'    => 'xxxx',
-                    'content' => 'bbbbb',
+                    'subject' => $subject,
+                    'content' => $content,
                 ]);
 
             if ($task) {
 
                 $data = [
-                    'status'  => 'success',
                     'code'    => 200,
-                    'message' => 'The data were successfully updated.'
+                    'message' => 'OK'
                 ];
 
             } else {
 
                 $data = [
-                    'status'  => 'error',
-                    'code'    => 400,
-                    'message' => 'No row to be updated.'
+                    'code'    => 204,
+                    'message' => 'No task'
                 ];
 
             }
         } else {
+
             $data = [
-                'status'  => 'Bad Request',
                 'code'    => 400,
-                'message' => 'Problem with the request, such as a missing, invalid or type mismatched parameter.'
+                'message' => 'Bad request'
             ];
+
         }
 
         return response()->json($data);
@@ -127,41 +141,42 @@ class ApiController extends Controller
 
 
 
+    /**
+     * @param  Request
+     * @return [type]
+     */
     public function status($id = null, Request $request) 
     {
 
-        if ($request->has('name')) {
-            //
-            $id = $request->input('id');
-            $task = Task::where('id', $id)
-                ->update([
-                    'task'    => 'xxxx',
-                    'content' => 'bbbbb',
-                ]);
+        if ($id && $request->has('status') && ($request->input('status') == 'pending' || $request->input('status') == 'done')) {
+
+            $status = $request->input('status');
+
+            $task   = Task::where('id', $id)
+                ->update([ 'status' => $status ]);
 
             if ($task) {
 
                 $data = [
-                    'status'  => 'success',
                     'code'    => 200,
-                    'message' => 'The data were successfully updated.'
+                    'message' => 'OK'
                 ];
 
             } else {
 
                 $data = [
-                    'status'  => 'error',
-                    'code'    => 400,
-                    'message' => 'No row to be updated.'
+                    'code'    => 204,
+                    'message' => 'No task'
                 ];
 
             }
         } else {
+
             $data = [
-                'status'  => 'Bad Request',
                 'code'    => 400,
-                'message' => 'Problem with the request, such as a missing, invalid or type mismatched parameter.'
+                'message' => 'Bad request'
             ];
+
         }
 
         return response()->json($data);
