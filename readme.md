@@ -20,11 +20,11 @@ Returns json data.
 
 ## Usage
 
-| Path        		| Verb 		| Description  						|
-| ----------------- | --------- | ---------------------------------	|
-| /api     			| GET 		| List all task of to do list		|
-| /api/{id}     	| GET		| View a single task by id 			|
-| /api/create   	| POST		| Add a new task 					|
-| /api/{id} 		| PUT/PATCH | Update task title/content by id	|
-| /api/{id}/status 	| PUT/PATCH | Update task status by id			|
-| /api/{id} 		| DELETE  	| Delete task by id 				|
+| Path        		| Verb 		| Description  					|
+| ----------------- | --------- | -----------------------------	|
+| /api     			| GET 		| List all task of to do list	|
+| /api/{id}     	| GET		| View a single task 			|
+| /api/create   	| POST		| Add a new task 				|
+| /api/{id} 		| PUT/PATCH | Update task title/content 	|
+| /api/{id}/status 	| PUT/PATCH | Update task status 			|
+| /api/{id} 		| DELETE  	| Delete task 					|
