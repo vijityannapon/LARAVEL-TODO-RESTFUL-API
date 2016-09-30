@@ -29,11 +29,6 @@ Returns json data.
 | /api/{id} 		| DELETE  	| Delete task 					|
 
 
-
-
-
-<Enter>
-<Enter>
 ## Status Codes
 | Code  | Message 		| Description																		|
 | ------| ------------- | ---------------------------------------------------------------------------------	|

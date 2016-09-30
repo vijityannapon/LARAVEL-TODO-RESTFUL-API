@@ -187,9 +187,8 @@ class ApiController extends Controller
         } else {
 
             $data = [
-                'status'  => 'error',
-                'code'    => 400,
-                'message' => 'No row to be deleted.'
+                'code'    => 204,
+                'message' => 'No task'
             ];
 
         }
